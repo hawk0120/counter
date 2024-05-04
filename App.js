@@ -9,6 +9,11 @@ export default function App() {
   };
 
   const onPressDecrement = () => {
+    if (counter < 0) {
+      alert("You cannot have less than 0 people in the building");
+      setCounter(0);
+      return;
+    }
     setCounter(counter - 1);
   };
   return (
