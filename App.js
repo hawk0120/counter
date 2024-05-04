@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { Button, StyleSheet, Text, View} from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   const [counter, setCounter] = useState(0);
@@ -13,7 +13,7 @@ export default function App() {
   };
   return (
     <View style={styles.container}>
-      <Text>{counter}</Text>
+      <Text style={styles.text}>{counter}</Text>
       <View style={styles.row}>
         <Button
           onPress={() => onPressIncrement()}
@@ -37,10 +37,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-evenly",
   },
+  text: {
+    fontSize: 100,
+  },
   row: {
-				flexDirection: "row",
-				justifyContent: "space-evenly",
-				width:  300
-	},
-
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    width: 300,
+  },
 });
